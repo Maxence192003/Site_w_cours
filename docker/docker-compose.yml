@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  apache:
+    image: php:8.2-apache
+    container_name: xampp_apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./htdocs:/var/www/html
+    depends_on:
+      - mysql
+    build: 
+      context: .
+      dockerfile: Dockerfile
+
+  mysql:
+    image: mysql:8
+    container_name: xampp_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: xampp_phpmyadmin
+    restart: always
+    depends_on:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "8081:80"
+
+volumes:
+  mysql_data:

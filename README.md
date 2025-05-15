@@ -47,29 +47,41 @@ Ce projet est une application web développée dans le cadre de la première ann
 
 ## 🚀 Lancer le projet avec Docker
 
-1. Cloner le dépôt :
+1. **Cloner le dépôt :**
    ```bash
    git clone https://github.com/Maxence192003/Site_w_cours.git
    cd Site_w_cours
    ```
 
-2. Lancer Docker :
+2. **Lancer Docker :**
    ```bash
    docker-compose up -d
    ```
 
-3. Accéder au site et la BDD :
-   Ouvrez votre navigateur à l'adresse http://localhost:8080/www/index.php pour le site web
-   Ouvrez votre navigateur à l'adresse http://localhost:8081/ pour le site web
-      ├── Username: root
-      └── Password: root
+3. **Accéder à l'application et à la base de données :**
 
-4. Ajouter la BDD d'exemple dans la BDD local:
-   Il faudrat juste faire un import
+   - Site web : http://localhost:8080/www/index.php
+   - PhpMyAdmin : http://localhost:8081
+     ```
+     ├── Username: root
+     └── Password: root
+     ```
 
-## Note:
-1. Pour pouvoir accéder au CRUD il faudrat ce connecter et ajouter un rôle A (correspond au admin) dans la table users  dans la BBD.
-   Commande a taper: Il faudrat mettre l'id de la personne a qui vous voulez ajouter le role
+4. **Importer la base de données :**
+
+   - Depuis PhpMyAdmin, importer le fichier SQL présent dans le dossier `BDD/`.
+
+---
+
+## 🔐 Accès à l'administration
+
+Pour accéder aux fonctionnalités d'administration du CRUD :
+
+1. Connectez-vous avec le compte root.
+2. Dans la table `users`, attribuez le rôle `A` à l'utilisateur souhaité :
+
+   ```sql
    UPDATE users
    SET role = 'A'
-   WHERE id = ;
+   WHERE id = <ID_UTILISATEUR>;
+   ```

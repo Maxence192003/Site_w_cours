@@ -61,8 +61,8 @@ Ce projet est une application web développée dans le cadre de la première ann
 3. Accéder au site et la BDD :
    Ouvrez votre navigateur à l'adresse http://localhost:8080/www/index.php pour le site web
    Ouvrez votre navigateur à l'adresse http://localhost:8081/ pour le site web
-   ├── Username: root
-   └── Password: root
+      ├── Username: root
+      └── Password: root
 
 4. Ajouter la BDD d'exemple dans la BDD local:
    Il faudrat juste faire un import

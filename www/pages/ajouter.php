@@ -21,39 +21,40 @@
     <title>Ajouter un Livre</title> <!-- Titre de la page, affiché dans l'onglet du navigateur. -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body id=form_b>
+    <div id=form_d>
 
-    <h2>Ajouter un Livre</h2> <!-- Titre principal de la page (section d'ajout de livre). -->
+        <h2>Ajouter un Livre</h2> <!-- Titre principal de la page (section d'ajout de livre). -->
 
-    <!-- Formulaire pour ajouter un livre -->
-    <form method="POST" action="traitement_biblio.php" enctype="multipart/form-data">
-        <!-- Le formulaire envoie les données à 'traitement_biblio.php' via la méthode POST. -->
-        <!-- L'attribut 'enctype="multipart/form-data"' est nécessaire si des fichiers sont envoyés (par exemple, une image). -->
+        <!-- Formulaire pour ajouter un livre -->
+        <form method="POST" action="traitement_biblio.php" enctype="multipart/form-data">
+            <!-- Le formulaire envoie les données à 'traitement_biblio.php' via la méthode POST. -->
+            <!-- L'attribut 'enctype="multipart/form-data"' est nécessaire si des fichiers sont envoyés (par exemple, une image). -->
 
-        <label for="Titre">Titre</label> <!-- Étiquette pour le champ du titre du livre. -->
-        <input type="text" id="Titre" name="Titre" required> <!-- Champ pour entrer le titre du livre. 'required' signifie que ce champ est obligatoire. -->
-        <br> <!-- Saut de ligne pour espacer les éléments. -->
+            <label for="Titre">Titre</label> <!-- Étiquette pour le champ du titre du livre. -->
+            <input type="text" id="Titre" name="Titre" required> <!-- Champ pour entrer le titre du livre. 'required' signifie que ce champ est obligatoire. -->
+            <br> <!-- Saut de ligne pour espacer les éléments. -->
 
-        <label for="Auteur">Auteur</label>
-        <input type="text" id="Auteur" name="Auteur" required>
-        <br>
+            <label for="Auteur">Auteur</label>
+            <input type="text" id="Auteur" name="Auteur" required>
+            <br>
 
-        <label for="Bio">Biographie</label>
-        <input type="text" id="Bio" name="Bio" required>
-        <br>
+            <label for="Bio">Biographie</label>
+            <input type="text" id="Bio" name="Bio" required>
+            <br>
 
-        <label for="Desc">Description</label>
-        <input type="text" id="Desc" name="Desc" required>
-        <br>
+            <label for="Desc">Description</label>
+            <input type="text" id="Desc" name="Desc" required>
+            <br>
 
-        <label for="image">Image (facultatif)</label> 
-        <input type="file" id="image" name="image" accept="image/*">
-        <br>
+            <label for="image">Image (facultatif)</label> 
+            <input type="file" id="image" name="image" accept="image/*">
+            <br>
 
-        <!-- Boutons du formulaire -->
-        <button type="submit" name="okay">Ajouter</button> <!-- Bouton pour soumettre le formulaire et ajouter un livre. Le nom 'okay' peut être utilisé pour traiter la demande dans le backend. -->
-        <button type="button" onclick="window.location.href='Admin.php'">Annuler</button> <!-- Bouton qui annule l'ajout et redirige l'utilisateur vers la page d'accueil (index.php). -->
-    </form>
-
+            <!-- Boutons du formulaire -->
+            <button type="submit" name="okay">Ajouter</button> <!-- Bouton pour soumettre le formulaire et ajouter un livre. Le nom 'okay' peut être utilisé pour traiter la demande dans le backend. -->
+            <button type="button" onclick="window.location.href='Admin.php'">Annuler</button> <!-- Bouton qui annule l'ajout et redirige l'utilisateur vers la page d'accueil (index.php). -->
+        </form>
+</div>
 </body>
 </html>

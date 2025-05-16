@@ -53,22 +53,23 @@
     <title>Connexion</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
-    <h1>Connexion</h1>
+<body id=form_b>
+    <div id="form_d">
+        <h1>Connexion</h1>
 
-    <form method="POST" action="">
-        <label for="email">Email :</label>
-        <input type="email" name="email" id="email" required>
-        <br>
+        <form method="POST" action="">
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" required>
+            <br>
 
-        <label for="password">Mot de passe :</label>
-        <input type="password" name="password" id="password" required>
-        <br>
+            <label for="password">Mot de passe :</label>
+            <input type="password" name="password" id="password" required>
+            <br>
 
-        <button type="submit">Se connecter</button>
-        <button type="button" onclick="window.location.href='../index.php'">Annuler</button>
-    </form>
-
+            <button type="submit">Se connecter</button>
+            <button type="button" onclick="window.location.href='../index.php'">Annuler</button>
+        </form>
+    </div>
     <?php if (!empty($erreur)) { echo "<p style='color:red;'>$erreur</p>"; } ?>
 </body>
 </html>
